@@ -1,6 +1,6 @@
 #include "stdio.h"
 #include "stdlib.h"
-#include <sys/types.h>
+#include "unistd"
 #include "fcntl.h"
 
 int main(int argc, char* argv[]){
