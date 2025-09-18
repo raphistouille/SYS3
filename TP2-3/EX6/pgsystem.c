@@ -10,18 +10,23 @@ int main(int argv, char argc[]){
     
     while(choice[0] != '4'){
 
-        printf("  1/ ls\n  2/ ps -ef\n  3/ find . -name data -print\n  4/ quitter \n\n");
-
+        if(choice[0] != ' '){
+            printf("  1/ ls\n  2/ ps -ef\n  3/ find . -name data -print\n  4/ quitter \n\n");
+        }
+        
+        choice[0]=' ';
         read(0,choice,1);
 
-        if(choice[0] == '1'){
-            execlp("bash","ls\n",NULL);
+        if(choice[0] == ' '){
+        }
+        else if(choice[0] == '1'){
+            system("ls");
         }
         else if(choice[0] == '2'){
-            //execlp();
+            system("ps -ef");
         }
         else if(choice[0] == '3'){
-            //execlp();
+            system("find . -name data -print");
         }
         else if(choice[0] != '4'){
             printf("choix non reconu\n");
