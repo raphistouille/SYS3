@@ -1,4 +1,7 @@
-#include "stdio.h"
+#include <fcntl.h>
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
 
 void lire(){
     char data[100];
